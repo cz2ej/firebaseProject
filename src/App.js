@@ -1,25 +1,32 @@
 import React from 'react';
 import './App.css';
-<<<<<<< HEAD
 import profilePage from './profilePage';
 import HomePage from "./HomePage";
-
+import firebase from '/.firebase'
 
 
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-=======
-import HomePage from './HomePage.js'
-
-function App() {
-  return (
-    <div className="App">
-        <HomePage />
-    </div>
-  );
-}
->>>>>>> firebase
 
 class App extends React.Component {
+  state = {
+    user: {}
+
+  }
+  componentDidMount(){
+    this.authListener();
+  }
+  authListener() {
+    firebase.auth().onAuthStateChanged((user) => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+        //localStorage.setItem('user', user.uid);
+      } else {
+        this.setState({ user: null });
+        //localStorage.removeItem('user');
+      }
+    });
+  }
 
   render() {
     return (
