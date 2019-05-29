@@ -1,21 +1,26 @@
 import React from 'react';
 import './App.css';
-<<<<<<< HEAD
-import ProfilePage from './ProfilePage';
+import profilePage from './profilePage';
+import HomePage from "./HomePage";
 
-function App() {
-  return (
-    <div className="App">
-      <ProfilePage />
-=======
-import HomePage from './HomePage.js'
-function App() {
-  return (
-    <div className="App">
-        <HomePage />
->>>>>>> homepage
-    </div>
-  );
+
+
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <Router>
+      <div className = "App">
+      <Switch>
+        <Route  path="/profile" component={profilePage} />
+        <Route  path="/" component={HomePage} />
+        </Switch>
+      </div>
+
+    </Router>
+    );
+  }
 }
-
 export default App;

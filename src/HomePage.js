@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 
 export default class HomePage extends React.Component{
     constructor(props){
