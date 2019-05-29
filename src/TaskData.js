@@ -18,7 +18,9 @@ export default class TaskData extends React.Component{
         var tempDate = new Date();
         var currDate = (tempDate.getMonth()+1) + '-' + tempDate.getDate() + "-" + tempDate.getFullYear();
         var currTime = tempDate.getHours() + ":" + tempDate.getMinutes();
-        const taskRef = firebase.database().ref("tasks");
+        var userId = firebase.auth().currentUser.uid;
+        console.log(userId);
+        const taskRef = firebase.database().ref('users/' + userId + '/tasks');
             const task = {
                 date: currDate,
                 details: this.state.details,
