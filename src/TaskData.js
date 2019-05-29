@@ -21,6 +21,7 @@ export default class TaskData extends React.Component{
                 time: this.state.time,
                 details: this.state.details,
             };
+
             taskRef.push(task);
     };
 
