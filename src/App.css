@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-links{
+  width: 50%;
+  display: flex;
+   justify-content: space-around;
+   align-items: center;
+   list-style: none;
+   font-style: initial
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(46, 130, 158);
+  color: white;
+}
