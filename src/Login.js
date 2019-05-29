@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect} from 'react-router-dom';
 import firebase from './firebase.js';
 
 class Login extends Component {
@@ -19,11 +19,15 @@ class Login extends Component {
   }
 
   login(e) {
+   
+     
+    
     e.preventDefault();
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
     }).catch((error) => {
         console.log(error);
       });
+      
   }
 
   signup(e){

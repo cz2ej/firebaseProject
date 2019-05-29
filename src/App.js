@@ -12,7 +12,7 @@ class App extends React.Component {
     user: {}
 
   }
-  componentDidMount(){
+  componentDidMount() {
     this.authListener();
   }
   authListener() {
@@ -31,17 +31,19 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {this.state.user ? <HomePage/>:<Login/>}
+        {this.state.user ? <HomePage />:<Login/>}
       </div>
-    //   <Router>
-    //   <div className = "App">
-    //   <Switch>
-    //     <Route  path="/profile" component={profilePage} />
-    //     <Route  path="/" component={HomePage} />
-    //     </Switch>
-    //   </div>
+      
+      // <Router>
+      //   <div className="App">
+      //     <Switch>
+      //       <Route exact path="/profile" component={profilePage} />
+      //       <Route exact path="/login" component={Login} />
+      //       <Route exact path="/homepage" component={HomePage} />
+      //     </Switch>
+      //   </div>
 
-    // </Router>
+      // </Router>
     );
   }
 }
