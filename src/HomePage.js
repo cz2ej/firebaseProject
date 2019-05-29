@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navbar from "./Navbar"
+//import logo from './logo.svg';
 
 export default class HomePage extends React.Component{
     constructor(props){
@@ -10,6 +11,7 @@ export default class HomePage extends React.Component{
 render(){
     return(
         <div>
+            <Navbar />
             <h1>HomePage</h1>
         </div>
     )
