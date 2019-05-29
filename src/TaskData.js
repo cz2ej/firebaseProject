@@ -15,11 +15,14 @@ export default class TaskData extends React.Component{
     }
 
     handleClick = event => {
+        var tempDate = new Date();
+        var currDate = (tempDate.getMonth()+1) + '-' + tempDate.getDate() + "-" + tempDate.getFullYear();
+        var currTime = tempDate.getHours() + ":" + tempDate.getMinutes();
         const taskRef = firebase.database().ref("tasks");
             const task = {
-                date: this.state.date,
-                time: this.state.time,
+                date: currDate,
                 details: this.state.details,
+                time: currTime
             };
 
             taskRef.push(task);
@@ -37,22 +40,6 @@ export default class TaskData extends React.Component{
             <div>
                 <div class="box">
                 <h1>Enter Task Details</h1>
-                    <TextField 
-                        id="filled-name"
-                        label="Date" 
-                        value={this.state.date}
-                        onChange={this.handleChange('date')}
-                        variant="filled"
-                        margin="normal"
-                        /><br></br>
-                        <TextField 
-                        id="filled-name"
-                        label="Time" 
-                        value={this.state.time}
-                        onChange={this.handleChange('time')}
-                        variant="filled"
-                        margin="normal"
-                        /><br></br>
                         <TextField 
                         id="filled-name"
                         label="Details" 

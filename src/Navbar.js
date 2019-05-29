@@ -16,12 +16,13 @@ class Navbar extends Component {
             <nav>
                 {/* <img className = "logo" src = "https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"></img> */}
                 <ul className="nav-links">
-                    <Link style = {{color: 'white'}} to = {{pathname:"/"}}>
+                    <Link style = {{color: 'white'}} to = {{pathname:"/homepage"}}>
                         <li>Home</li>
                     </Link>
                     <Link style = {{color: 'white'}} to ={{pathname:"/profile"}}>
                         <li>Profile</li>
                     </Link>
+                    
                 </ul>
 
 
