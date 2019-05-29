@@ -1,11 +1,23 @@
 import React from 'react';
 import './App.css';
+<<<<<<< HEAD
 import profilePage from './profilePage';
 import HomePage from "./HomePage";
 
 
 
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+=======
+import HomePage from './HomePage.js'
+
+function App() {
+  return (
+    <div className="App">
+        <HomePage />
+    </div>
+  );
+}
+>>>>>>> firebase
 
 class App extends React.Component {
 
