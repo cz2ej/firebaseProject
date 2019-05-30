@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from "./Navbar"
 import firebase from "./firebase.js"
 import TaskData from "./TaskData.js"
-import Countdown from "./Countdown.js"
+
 //import logo from './logo.svg';
 import profilePage from './profilePage';
 import Home from "./Home"
@@ -35,7 +35,7 @@ export default class HomePage extends React.Component {
                 <div className="App">
                     <Switch>
                         <Route exact path="/profile" component={profilePage} />
-                         <Route path="/" component={Home} /> */}
+                         <Route path="/" component={Home} /> 
                     </Switch>
                 </div>
             </Router>

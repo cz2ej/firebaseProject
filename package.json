@@ -10,7 +10,10 @@
     "react-compound-timer": "^1.0.13",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-timer-hook": "^1.1.6"
+    "react-timecode": "^1.1.16",
+    "react-timer-hook": "^1.1.6",
+    "react-timer-machine": "^1.0.2",
+    "react-timer-wrapper": "^0.3.7"
   },
   "scripts": {
     "start": "react-scripts start",
